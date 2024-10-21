@@ -19,7 +19,7 @@ Considering the above, the SiPM model [MICROFJ-40035-TSV-TR1](https://www.onsemi
 These instructions will guide you on how to design and assemble the SiPM.  You can access the project by clicking here **[SiPM Detector Module]( https://github.com/wenzel-lab/SiPM-detector-module)**
 
 
-* [.](schematic3.md){step}
+* [TSV_Pin_Adapter_board](schematic3.md){step}
 
 
 

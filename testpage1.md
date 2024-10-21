@@ -9,6 +9,6 @@ A two-stage amplifier is designed to detect up to a single photon with high band
 These instructions will guide you on how to design and assemble the readout of SiPM. You can access the project by clicking here **[SiPM Detector Module]( https://github.com/wenzel-lab/SiPM-detector-module)**
 
 
-* [.](Schematic.md){step}
+* [Schematic_Redout_SiPM](Schematic.md){step}
 
 

@@ -9,7 +9,7 @@ This circuit generates a continuous voltage of up to 33V to bias a silicon photo
 These instructions will guide you on how to design and assemble the bias supply for SiPM. You can access the project by clicking here **[SiPM Detector Module]( https://github.com/wenzel-lab/SiPM-detector-module)**
 
 
-* [.](schematic2.md){step}
+* [Schematic_Controllable_Bias_Supply](schematic2.md){step}
 
 
 
