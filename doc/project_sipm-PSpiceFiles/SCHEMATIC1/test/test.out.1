@@ -1,0 +1,61 @@
+
+**** 10/07/24 20:42:50 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\Macarena\Documents\IIBM\Amplificador SiPM\project_sipm-pspicefiles\schematic1\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROJECT_SIPM
+X_U1         N03746 N00350 N00737 N00750 N00455 LMH6624
+V_V1         N01128 0  
++PULSE 0 30mVdc 0 1n 2n 1n 25n
+R_R2         N01128 N00350  50. TC=0,0 
+R_R3         N00350 N00455  1k TC=0,0 
+C_C1         N00350 N00455  2p  TC=0,0 
+C_C2         N00455 N01448  1u  TC=0,0 
+R_R4         0 N01452  4.7k TC=0,0 
+V_V2         N00737 0 5Vdc
+V_V3         N00750 0 -5Vdc
+X_U2         N01452 N01527 N01867 N02227 N01557 LMH6624
+R_R6         N01448 N01452  50 TC=0,0 
+R_R7         N01527 N01557  1k TC=0,0 
+C_C3         N01527 N01557  2p  TC=0,0 
+R_R8         0 N01527  50 TC=0,0 
+V_V4         N01867 0 5Vdc
+V_V5         N02227 0 -5Vdc
+R_R9         N01557 N04664  50 TC=0,0 
+R_R10         N03746 0  10 TC=0,0 
+C_C4         0 N04664  0  TC=0,0 
+-----------------------$
+ERROR(ORPSIM-16144): Value may not be 0
+
+**** RESUMING test.cir ****
+.END
+

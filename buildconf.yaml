@@ -1,0 +1,25 @@
+Authors:
+  - Francisco Martínez
+  - Tobías Wenzel
+HoverColor: '#555555'
+LandingPage: index.md
+License: CERN-OHL-W-2.0
+Navigation:
+  - Link: testpage7.md
+    SubNavigation:
+      - Link: schematic3.md
+        Title: Schematic
+    Title: SiPM
+  - Link: testpage1.md
+    SubNavigation:
+      - Link: Schematic.md
+        Title: Schematic
+    Title: Redout SiPM
+  - Link: testpage5.md
+    SubNavigation:
+      - Link: schematic2.md
+        Title: Schematic
+    Title: Bias Supply
+PrimaryColor: '#f1502f'
+SecondaryColor: '#cccccc'
+Title: SiPM Detector Module

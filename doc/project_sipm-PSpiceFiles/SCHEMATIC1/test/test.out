@@ -1,0 +1,336 @@
+
+**** 10/21/24 05:45:04 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\Macarena\Documents\IIBM\Amplificador SiPM\project_sipm-pspicefiles\schematic1\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROJECT_SIPM
+X_U1         N03746 N00350 N00737 N00750 N00455 LMH6624
+V_V1         N01128 0  
++PULSE 0 30mVdc 0 1n 2n 1n 25n
+R_R2         N01128 N00350  50 TC=0,0 
+R_R3         N00350 N00455  470 TC=0,0 
+C_C1         N00350 N00455  1p  TC=0,0 
+C_C2         N00455 N07860  100n  TC=0,0 
+R_R4         0 N01460  1k TC=0,0 
+V_V2         N00737 0 5Vdc
+V_V3         N00750 0 -5Vdc
+X_U2         N01460 N01527 N01867 N02227 N01557 LMH6624
+R_R6         N07860 N01460  47.5 TC=0,0 
+R_R7         N01527 N01557  1k TC=0,0 
+R_R8         0 N01527  50 TC=0,0 
+V_V4         N01867 0 5Vdc
+V_V5         N02227 0 -5Vdc
+R_R9         N10938 N11428  47.5 TC=0,0 
+R_R10         N03746 0  47.5 TC=0,0 
+C_C4         N10938 N01557  100n  TC=0,0 
+R_R11         0 N11428  50 TC=0,0 
+C_C5         N03746 0  100n  TC=0,0 
+
+**** RESUMING test.cir ****
+.END
+
+**** 10/21/24 05:45:04 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\Macarena\Documents\IIBM\Amplificador SiPM\project_sipm-pspicefiles\schematic1\test.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.DD         X_U1.DVN        X_U1.DIN        X_U1.DIC        
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+          RS                                                   50            
+          KF                   10.000000E-15  260.000000E-15                 
+
+
+               X_U2.DD         X_U2.DVN        X_U2.DIN        X_U2.DIC        
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+          RS                                                   50            
+          KF                   10.000000E-15  260.000000E-15                 
+
+
+**** 10/21/24 05:45:04 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\Macarena\Documents\IIBM\Amplificador SiPM\project_sipm-pspicefiles\schematic1\test.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.QDP        X_U1.QDN        X_U1.QON        X_U1.QOP        
+               PNP             NPN             NPN             PNP             
+       LEVEL    1               1               1               1            
+          IS  100.000000E-18  100.000000E-18  100.000000E-18  100.000000E-18 
+          BF  100             100             250             250            
+          NF    1               1               1               1            
+         VAF                                  150             150            
+         IKF                                    1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               1               1            
+          RC    0               0               9               9            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.42            2.2          
+           D     .52             .87             .87             .52         
+
+
+               X_U1.QIN        X_U2.QDP        X_U2.QDN        X_U2.QON        
+               NPN             PNP             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  100.000000E-18  100.000000E-18  100.000000E-18  100.000000E-18 
+          BF   90             100             100             250            
+          NF    1               1               1               1            
+         VAF  150                                             150            
+         IKF    5.000000E-03                                    1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    1               0               0               1            
+          RC    1               0               0               9            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.2             2.42            2.42         
+           D     .87             .52             .87             .87         
+
+
+               X_U2.QOP        X_U2.QIN        
+               PNP             NPN             
+       LEVEL    1               1            
+          IS  100.000000E-18  100.000000E-18 
+          BF  250              90            
+          NF    1               1            
+         VAF  150             150            
+         IKF    1               5.000000E-03 
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    1               1            
+          RC    9               1            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.42         
+           D     .52             .87         
+
+
+**** 10/21/24 05:45:04 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\Macarena\Documents\IIBM\Amplificador SiPM\project_sipm-pspicefiles\schematic1\test.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00350)-589.7E-06 (N00455)-273.3E-06 (N00737)    5.0000 (N00750)   -5.0000     
+
+(N01128)    0.0000 (N01460)    -.0125 (N01527)    -.0124 (N01557)    -.2489     
+
+(N01867)    5.0000 (N02227)   -5.0000 (N03746)-592.2E-06 (N07860)    -.0125     
+
+(N10938)    0.0000 (N11428)    0.0000 (X_U1.6)    -.7609 (X_U1.7)-271.0E-06     
+
+(X_U1.8)     .7604 (X_U1.9)     .5955 (X_U2.6)   -1.0156 (X_U2.7)    -.2497     
+
+(X_U2.8)     .5057 (X_U2.9)     .5955 (X_U1.10)     .5955                       
+
+(X_U1.11)   -5.0000                   (X_U1.12)    5.0000                       
+
+(X_U1.13)     .6730                   (X_U1.14)     .6730                       
+
+(X_U1.15)-589.7E-06                   (X_U1.16)    5.0000                       
+
+(X_U1.17)   -5.0000                   (X_U1.18)-590.9E-06                       
+
+(X_U1.19)-590.9E-06                   (X_U1.20) 500.0E-06                       
+
+(X_U1.21)-500.0E-06                   (X_U1.22)-59.09E-09                       
+
+(X_U1.23)-592.2E-06                   (X_U1.24)-589.7E-06                       
+
+(X_U1.25)-592.2E-06                   (X_U1.26)-639.7E-06                       
+
+(X_U1.27)-629.7E-06                   (X_U1.28)-256.0E-06                       
+
+(X_U1.29) 256.0E-06                   (X_U1.30)-256.6E-06                       
+
+(X_U1.31)-256.0E-06                   (X_U1.32)-609.9E-09                       
+
+(X_U1.33)-255.4E-06                   (X_U1.34)-256.0E-06                       
+
+(X_U1.35)    1.4167                   (X_U1.36)   -1.3973                       
+
+(X_U1.37)     .6551                   (X_U1.38)-256.6E-06                       
+
+(X_U1.39)-256.0E-06                   (X_U1.40)-255.4E-06                       
+
+(X_U1.41)-273.3E-06                   (X_U1.42)    4.8755                       
+
+(X_U1.43)    4.8755                   (X_U1.44)    -.7789                       
+
+(X_U1.45)    -.7788                   (X_U1.46)    -.7788                       
+
+(X_U1.47)   -4.1982                   (X_U1.48)    5.2000                       
+
+(X_U1.49)   -1.4289                   (X_U1.50)-629.7E-06                       
+
+(X_U1.51)    4.0000                   (X_U2.10)     .5955                       
+
+(X_U2.11)   -5.0000                   (X_U2.12)    5.0000                       
+
+(X_U2.13)     .6730                   (X_U2.14)     .6730                       
+
+(X_U2.15)    -.0124                   (X_U2.16)    5.0000                       
+
+(X_U2.17)   -5.0000                   (X_U2.18)    -.0125                       
+
+(X_U2.19)    -.0125                   (X_U2.20) 500.0E-06                       
+
+(X_U2.21)-500.0E-06                   (X_U2.22)-1.245E-06                       
+
+(X_U2.23)    -.0125                   (X_U2.24)    -.0124                       
+
+(X_U2.25)    -.0125                   (X_U2.26)    -.0125                       
+
+(X_U2.27)    -.0125                   (X_U2.28)    -.2550                       
+
+(X_U2.29)     .2550                   (X_U2.30)    -.2550                       
+
+(X_U2.31)    -.2550                   (X_U2.32)-609.9E-09                       
+
+(X_U2.33)    -.2550                   (X_U2.34)    -.2550                       
+
+(X_U2.35)    1.1620                   (X_U2.36)   -1.6520                       
+
+(X_U2.37)     .6551                   (X_U2.38)    -.2550                       
+
+(X_U2.39)    -.2550                   (X_U2.40)    -.2550                       
+
+(X_U2.41)    -.2489                   (X_U2.42)    4.8754                       
+
+(X_U2.43)    4.8756                   (X_U2.44)    -.7908                       
+
+(X_U2.45)    -.7907                   (X_U2.46)    -.7907                       
+
+(X_U2.47)   -4.1982                   (X_U2.48)    5.2000                       
+
+(X_U2.49)   -1.4408                   (X_U2.50)    -.0125                       
+
+(X_U2.51)    4.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.179E-05
+    V_V2        -1.182E-02
+    V_V3         1.182E-02
+    V_V4        -1.171E-02
+    V_V5         1.195E-02
+    X_U1.V11     3.613E-12
+    X_U1.V12     3.593E-12
+    X_U1.V13     6.106E-16
+    X_U1.V14     1.974E-03
+    X_U1.V15     1.949E-03
+    X_U1.V16     1.247E-05
+    X_U1.V17     8.021E-12
+    X_U2.V11     3.358E-12
+    X_U2.V12     3.848E-12
+    X_U2.V13     6.099E-16
+    X_U2.V14     1.974E-03
+    X_U2.V15     1.949E-03
+    X_U2.V16     1.247E-05
+    X_U2.V17     8.045E-12
+
+    TOTAL POWER DISSIPATION   2.35E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/21/24 05:45:04 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\Macarena\Documents\IIBM\Amplificador SiPM\project_sipm-pspicefiles\schematic1\test.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.55
+
