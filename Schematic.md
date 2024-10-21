@@ -1,6 +1,6 @@
 # Schematic of Circuit
 
-For the preamplification stage, there are two options: design a transimpedance amplifier (TIA) or an inverting amplifier. Based on this, an operational amplifier is selected considering the following 3 criteria: *a unity-gain bandwidth of at least 1 GHz, input voltage noise less than 5 nV/√Hz, and a stable gain |AV| ≥ 10*. An operational amplifier with these characteristics can be used to amplify the SiPM signal with a pulse width of a few tens of nanoseconds without introducing significant noise at the 50 Ω output.
+For the preamplification stage, there are two options: design a transimpedance amplifier (TIA) or an inverting amplifier. Based on this, an operational amplifier is selected considering the following 3 criteria: *a unity-gain bandwidth of at least 1 GHz, input voltage noise less than 5 nV/√Hz, and a stable gain AV ≥ 10*. An operational amplifier with these characteristics can be used to amplify the SiPM signal with a pulse width of a few tens of nanoseconds without introducing significant noise at the 50 Ω output.
 
 **1.- Transimpedance Amplifier TIA:** A TIA is an amplifier that converts an input current signal into a voltage signal. It is commonly used in applications where the input signal is current, such as in SiPM. For its design, the following equations must be considered to calculate the feedback capacitance Cf and the cutoff frequency Fc at a given gain. For more information you can review this [article](https://www.ti.com/lit/an/sboa122/sboa122.pdf). 
 
@@ -11,7 +11,7 @@ For the preamplification stage, there are two options: design a transimpedance a
 >!
 >! From the equations, it can be determined that higher gain results in lower bandwidth and a smaller optimal value for Cf, which is recommended to be greater than 1 pF. Values smaller than this begin to be significantly affected by the parasitic capacitances of the PCB. Additionally, you must consider the minimum gain at which the selected amplifier is stable.
 
-**2.- Inverting Amplifier:** An inverting amplifier is a configuration where the input signal from SiPM is applied to the inverting input of the operational amplifier, while the non-inverting input is grounded. For its design, the following equations must be considered to calculate the feedback resistance Rf and bandwidth. The higher the gain, the lower the bandwidth. For a gain of |AV| = 10, the bandwidth is reduced to 150 MHz if GBP of amplifier is 1.5GHz. 
+**2.- Inverting Amplifier:** An inverting amplifier is a configuration where the input signal from SiPM is applied to the inverting input of the operational amplifier, while the non-inverting input is grounded. For its design, the following equations must be considered to calculate the feedback resistance Rf and bandwidth. The higher the gain, the lower the bandwidth. For a gain of AV = 10, the bandwidth is reduced to 150 MHz if GBP of amplifier is 1.5GHz. 
 
 ![](images/inverter.png)
 ![](images/equ2.png)
