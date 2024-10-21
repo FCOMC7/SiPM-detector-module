@@ -9,11 +9,11 @@ This is our open-source hardware and custom electronics solution for SiPM module
 To explore the documentation, please use the links below:
 
 - [SiPM](testpage7.md)
-	- [Go to TSV Pin Adapter board](schematic3.md#TSV Pin Adapter board)
+	- [Go to TSV_Pin_Adapter_board](schematic3.md#TSV_Pin_Adapter_board)
 - [Readout SiPM](testpage1.md)
-	- [Go to Schematic Redout SiPM](Schematic.md#Schematic Redout SiPM)
+	- [Go to Schematic_Redout_SiPM](Schematic.md#Schematic_Redout_SiPM)
 - [Bias Supply](testpage5.md)
-	- [Go to Schematic Controllable Bias Supply](schematic2.md#Controllable Schematic Bias Supply)
+	- [Go to Schematic_Controllable_Bias_Supply](schematic2.md#Controllable_Schematic_Bias_Supply)
  
 
 ## References
